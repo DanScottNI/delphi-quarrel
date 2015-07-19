@@ -1,0 +1,95 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{d847d8c8-0117-4fa7-a6a7-0999f0989ae1}</ProjectGuid>
+    <MainSource>BattleCityEditor.dpr</MainSource>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>BattleCityEditor.exe</DCC_DependencyCheckOutputName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_Define>RELEASE</DCC_Define>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_Define>DEBUG</DCC_Define>
+    <DCC_Optimize>False</DCC_Optimize>
+    <DCC_UnitSearchPath>$(BDS)\lib\Debug;$(BDS)\Lib\Debug\Indy10;C:\PROGRA~1\CodeGear\RADSTU~1\5.0\lib\JVCL\jcl\lib\d11\debug</DCC_UnitSearchPath>
+    <DCC_ResourcePath>$(BDS)\lib\Debug;$(BDS)\Lib\Debug\Indy10;C:\PROGRA~1\CodeGear\RADSTU~1\5.0\lib\JVCL\jcl\lib\d11\debug</DCC_ResourcePath>
+    <DCC_ObjPath>$(BDS)\lib\Debug;$(BDS)\Lib\Debug\Indy10;C:\PROGRA~1\CodeGear\RADSTU~1\5.0\lib\JVCL\jcl\lib\d11\debug</DCC_ObjPath>
+    <DCC_IncludePath>$(BDS)\lib\Debug;$(BDS)\Lib\Debug\Indy10;C:\PROGRA~1\CodeGear\RADSTU~1\5.0\lib\JVCL\jcl\lib\d11\debug</DCC_IncludePath>
+    <DCC_SYMBOL_PLATFORM>False</DCC_SYMBOL_PLATFORM>
+    <DCC_UNIT_PLATFORM>False</DCC_UNIT_PLATFORM>
+    <DCC_HIDDEN_VIRTUAL>False</DCC_HIDDEN_VIRTUAL>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType>VCLApplication</Borland.ProjectType>
+    <BorlandProject>
+<BorlandProject><Delphi.Personality><Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters></Parameters><VersionInfo><VersionInfo Name="IncludeVerInfo">True</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">0</VersionInfo><VersionInfo Name="MinorVer">9</VersionInfo><VersionInfo Name="Release">0</VersionInfo><VersionInfo Name="Build">6</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">2057</VersionInfo><VersionInfo Name="CodePage">1252</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName">Dragon Eye Studios</VersionInfoKeys><VersionInfoKeys Name="FileDescription">Quarrel - Battle City Editor</VersionInfoKeys><VersionInfoKeys Name="FileVersion">0.9.0.6</VersionInfoKeys><VersionInfoKeys Name="InternalName"></VersionInfoKeys><VersionInfoKeys Name="LegalCopyright"></VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys><VersionInfoKeys Name="OriginalFilename"></VersionInfoKeys><VersionInfoKeys Name="ProductName">Quarrel</VersionInfoKeys><VersionInfoKeys Name="ProductVersion">0.9</VersionInfoKeys><VersionInfoKeys Name="Comments"></VersionInfoKeys></VersionInfoKeys><Source><Source Name="MainSource">BattleCityEditor.dpr</Source></Source></Delphi.Personality><ModelSupport>False</ModelSupport></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+  <ItemGroup>
+    <DelphiCompile Include="BattleCityEditor.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="Classes\BCData.pas" />
+    <DCCReference Include="Classes\BCEnemy.pas" />
+    <DCCReference Include="Classes\BCLevel.pas" />
+    <DCCReference Include="Classes\BCStartingPos.pas" />
+    <DCCReference Include="Classes\Configuration.pas" />
+    <DCCReference Include="Classes\iNESHeaderChecks.pas" />
+    <DCCReference Include="Classes\Resources.pas" />
+    <DCCReference Include="Classes\uGlobals.pas" />
+    <DCCReference Include="fAbout.pas">
+      <Form>frmAbout</Form>
+    </DCCReference>
+    <DCCReference Include="fBattleCity.pas">
+      <Form>frmBattleCity</Form>
+    </DCCReference>
+    <DCCReference Include="fEnemy.pas">
+      <Form>frmEnemyEditor</Form>
+    </DCCReference>
+    <DCCReference Include="fExportLevel.pas">
+      <Form>frmExportLevel</Form>
+    </DCCReference>
+    <DCCReference Include="fFlagTSA.pas">
+      <Form>frmFlagTSAEditor</Form>
+    </DCCReference>
+    <DCCReference Include="fImportLevel.pas">
+      <Form>frmImportLevel</Form>
+    </DCCReference>
+    <DCCReference Include="fJumpTo.pas">
+      <Form>frmJumpTo</Form>
+    </DCCReference>
+    <DCCReference Include="fOpenDialog.pas">
+      <Form>frmOpenDialog</Form>
+    </DCCReference>
+    <DCCReference Include="fPalette.pas">
+      <Form>frmPaletteEditor</Form>
+    </DCCReference>
+    <DCCReference Include="fPreferences.pas">
+      <Form>frmPreferences</Form>
+    </DCCReference>
+    <DCCReference Include="fSaveStateImport.pas">
+      <Form>frmSaveStateImport</Form>
+    </DCCReference>
+    <DCCReference Include="fStartLive.pas">
+      <Form>frmLives</Form>
+    </DCCReference>
+    <DCCReference Include="fSwapLevels.pas">
+      <Form>frmSwapLevels</Form>
+    </DCCReference>
+    <DCCReference Include="fTankStatus.pas">
+      <Form>frmYourTankStatus</Form>
+    </DCCReference>
+    <DCCReference Include="fTSA.pas">
+      <Form>frmTSAEditor</Form>
+    </DCCReference>
+    <None Include="Resources\BattleCityJ.ini" />
+  </ItemGroup>
+</Project>

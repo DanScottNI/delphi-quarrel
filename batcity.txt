@@ -1,0 +1,45 @@
+Battle City
+
+1372+1373 - Two tiles that build up the tank list.
+137B - Block that appears when an enemy disappears from the list.
+1378 - One of the tiles that makes up the flag in the bottom right.
+
+2484 - X Position of the left tank
+2485 - X Position of the middle
+2486 - X Position of the right tank
+2487 - Y Position of the left tank
+2488 - Y Position of the middle tank that appears
+2489 - Y Position of the right tank
+248A - X Position of player one's tank
+248B - X Position of player two's tank
+248C - Y Position of player one's tank
+248D - Y Position of player two's tank
+
+9E3 - Start Y Position of title-screen cursor
+2374 - Starting status of player one's & two tank :)
+2CE - Change this to match the starting status, otherwise the power up system won't work.
+
+Routines LD80B - Routine that seems to load in the level blocks.
+
+1AA - Number of levels you want to scroll through +1
+1AE - Number of levels you want to scroll through
+1Cf - this sets the value that the stage select can be scrolled down to resets
+
+BOTH MUST BE SET. Levels have glitched up enemy sets past 35.
+
+F012 and F016 are the level data pointers.
+F004 and probably F009 need to be changed as they are the demo level.
+
+$F000:C9 FF     CMP #$FF
+$F002:D0 05     BNE $F009
+$F004:A9 24     LDA #$24
+$F006:4C 10 F0  JMP $F010
+$F009:C9 24     CMP #$24
+$F00B:90 03     BCC $F010
+$F00D:38        SEC
+$F00E:E9 23     SBC #$23
+$F010:85 00     STA $00 = #$40
+$F012:A9 F0     LDA #$F0
+$F014:85 12     STA $12 = #$07
+$F016:A9 7A     LDA #$7A
+$F018:85 11     STA $11 = #$62
